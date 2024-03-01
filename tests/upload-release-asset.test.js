@@ -36,8 +36,10 @@ describe('Upload Release Asset', () => {
     fs.readFileSync = jest.fn().mockReturnValueOnce(content);
 
     const githubMock = {
-      repos: {
-        uploadReleaseAsset
+      rest: {
+        repos: {
+          uploadReleaseAsset
+        }
       }
     };
 
