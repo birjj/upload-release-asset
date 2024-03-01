@@ -1,23 +1,14 @@
 # GitHub Action - Releases API
 
-**Please note:** This repository is currently unmaintained by a team of developers at GitHub. The 
-repository is here and you can use it as an example, or in Actions. However please be aware that 
-we are not going to be updating issues or pull requests on this repository.
-
-**Maintained Actions:**
-* [softprops/action-gh-release](https://github.com/softprops/action-gh-release)
-
-To reflect this state we’ve marked this repository as Archived.
-
-If you are having an issue or question about GitHub Actions then please [contact customer support](https://help.github.com/en/articles/about-github-actions#contacting-support).
-
-If you have found a security issue [please submit it here](https://hackerone.com/github).
-
----
+> [!NOTE]
+> This is a fork of the unmaintained [actions/upload-release-asset](https://github.com/actions/upload-release-asset). This fork attempts to solve a number of the outstanding issues that were bugging me, specifically:
+> - Asset `id` not being returned, in spite of documentation (https://github.com/actions/upload-release-asset/issues/48, https://github.com/actions/upload-release-asset/pull/54)
+>
+> Feel free to use this fork as-is, or consider an alternative maintained solution, e.g. [softprops/action-gh-release](https://github.com/softprops/action-gh-release) (all-in-one release action, mostly aimed at making new releases).
 
 This GitHub Action (written in JavaScript) wraps the [GitHub Release API](https://developer.github.com/v3/repos/releases/), specifically the [Upload a Release Asset](https://developer.github.com/v3/repos/releases/#upload-a-release-asset) endpoint, to allow you to leverage GitHub Actions to upload release assets.
 
-<a href="https://github.com/actions/upload-release-asset"><img alt="GitHub Actions status" src="https://github.com/actions/upload-release-asset/workflows/Tests/badge.svg"></a>
+<a href="https://github.com/birjj/upload-release-asset"><img alt="GitHub Actions status" src="https://github.com/birjj/upload-release-asset/workflows/Tests/badge.svg"></a>
 
 ## Usage
 ### Pre-requisites
@@ -68,7 +59,7 @@ jobs:
           prerelease: false
       - name: Upload Release Asset
         id: upload-release-asset 
-        uses: actions/upload-release-asset@v1
+        uses: birjj/upload-release-asset@v1
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
@@ -81,7 +72,7 @@ jobs:
 This will upload a release artifact to an existing release, outputting the `browser_download_url` for the asset which could be handled by a third party service, or by GitHub Actions for additional uses. For more information, see the GitHub Documentation for the [upload a release asset](https://developer.github.com/v3/repos/releases/#upload-a-release-asset) endpoint. 
 
 ## Contributing
-We would love you to contribute to `@actions/upload-release-asset`, pull requests are welcome! Please see the [CONTRIBUTING.md](CONTRIBUTING.md) for more information.
+We would love you to contribute to `@birjj/upload-release-asset`, pull requests are welcome! Please see the [CONTRIBUTING.md](CONTRIBUTING.md) for more information.
 
 ## License
 The scripts and documentation in this project are released under the [MIT License](LICENSE)
