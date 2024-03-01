@@ -58,9 +58,9 @@ describe('Upload Release Asset', () => {
 
     expect(uploadReleaseAsset).toHaveBeenCalledWith({
       url: 'upload_url',
-      headers: { 'content-type': 'asset_content_type', 'content-length': 527 },
+      headers: { 'Content-Type': 'asset_content_type' },
       name: 'asset_name',
-      file: content
+      data: content
     });
   });
 
