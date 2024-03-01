@@ -1,7 +1,7 @@
 ## Contributing
 
-[fork]: https://github.com/actions/upload-release-asset/fork
-[pr]: https://github.com/actions/upload-release-asset/compare
+[fork]: https://github.com/birjj/upload-release-asset/fork
+[pr]: https://github.com/birjj/upload-release-asset/compare
 [style]: https://github.com/styleguide/js
 [code-of-conduct]: CODE_OF_CONDUCT.md
 
