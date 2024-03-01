@@ -14,7 +14,7 @@ async function run() {
     const assetContentType = core.getInput('asset_content_type', { required: true });
 
     // Determine content-length for header to upload asset
-    const contentLength = filePath => fs.statSync(filePath).size;
+    const contentLength = (filePath) => fs.statSync(filePath).size;
 
     // Setup headers for API call, see Octokit Documentation: https://octokit.github.io/rest.js/#octokit-routes-repos-upload-release-asset for more information
     const headers = { 'content-type': assetContentType, 'content-length': contentLength(assetPath) };
