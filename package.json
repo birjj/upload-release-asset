@@ -50,10 +50,5 @@
         "statements": 80
       }
     }
-  },
-  "husky": {
-    "hooks": {
-      "pre-commit": "npm run build && git add dist/"
-    }
   }
 }
