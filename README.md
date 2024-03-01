@@ -4,7 +4,7 @@
 > This is a fork of the unmaintained [actions/upload-release-asset](https://github.com/actions/upload-release-asset). This fork attempts to solve a number of the outstanding issues that were bugging me, specifically:
 > - Asset `id` not being returned, in spite of documentation (https://github.com/actions/upload-release-asset/issues/48, https://github.com/actions/upload-release-asset/pull/54)
 >
-> Feel free to use this fork as-is, or consider an alternative maintained solution, e.g. [softprops/action-gh-release](https://github.com/softprops/action-gh-release) (all-in-one release action, mostly aimed at making new releases).
+> Feel free to use this fork as-is, or consider an alternative maintained solution, e.g. [softprops/action-gh-release](https://github.com/softprops/action-gh-release) (all-in-one release action, mostly aimed at making new releases) or [svenstaro/upload-release-action](https://github.com/svenstaro/upload-release-action) (another more feature-rich fork).
 
 This GitHub Action (written in JavaScript) wraps the [GitHub Release API](https://developer.github.com/v3/repos/releases/), specifically the [Upload a Release Asset](https://developer.github.com/v3/repos/releases/#upload-a-release-asset) endpoint, to allow you to leverage GitHub Actions to upload release assets.
 
