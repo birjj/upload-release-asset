@@ -26,6 +26,7 @@
     "@actions/github": "^6.0.0"
   },
   "devDependencies": {
+    "@types/jest": "^29.5.12",
     "@vercel/ncc": "^0.38.1",
     "eslint": "^8.57.0",
     "eslint-config-airbnb-base": "^15.0.0",

@@ -1,6 +1,15 @@
 jest.mock('@actions/core');
-jest.mock('@actions/github');
-jest.mock('fs');
+jest.mock('@actions/github', () => ({
+  GitHub: jest.fn(),
+  context: jest.fn()
+}));
+jest.mock('fs', () => ({
+  promises: {
+    access: jest.fn()
+  },
+  readFileSync: jest.fn(),
+  statSync: jest.fn()
+}));
 
 const core = require('@actions/core');
 const { GitHub, context } = require('@actions/github');
