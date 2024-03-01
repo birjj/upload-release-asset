@@ -5,9 +5,10 @@
   "description": "Upload a release asset to an existing GitHub Release",
   "main": "dist/index.js",
   "scripts": {
-    "lint": "eslint 'src/**.js' 'tests/**.js' --fix",
-    "test": "eslint 'src/**.js' 'tests/**.js' && jest --coverage",
-    "build": "ncc build src/main.js"
+    "lint": "eslint \"src/**/*.js\" \"tests/**/*.js\" --fix",
+    "test": "eslint \"src/**.js\" \"tests/**.js\" && jest --coverage",
+    "build": "ncc build src/main.js",
+    "prepare": "husky"
   },
   "repository": {
     "type": "git",
