@@ -29,12 +29,13 @@ async function run() {
       file: fs.readFileSync(assetPath)
     });
 
-    // Get the browser_download_url for the uploaded release asset from the response
+    // Get the id and browser_download_url for the uploaded release asset from the response
     const {
-      data: { browser_download_url: browserDownloadUrl }
+      data: { id, browser_download_url: browserDownloadUrl }
     } = uploadAssetResponse;
 
     // Set the output variable for use by other actions: https://github.com/actions/toolkit/tree/master/packages/core#inputsoutputs
+    core.setOutput('id', id);
     core.setOutput('browser_download_url', browserDownloadUrl);
   } catch (error) {
     core.setFailed(error.message);
